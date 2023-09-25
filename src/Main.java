@@ -21,6 +21,8 @@ public class Main {
 
         if(staff[0] instanceof Manager) System.out.println("emp");
 
+        Object obj = new Student("Pansy Parkinson", "witchcraft and wizardry");
+
         Person[] people = new Person[2];
         people[0] = new Employee("Harry Hacker", 50000, 1989, 10, 1);
         people[1] = new Student("Maria Morris", "computer science");
@@ -45,7 +47,11 @@ public class Main {
 //        System.out.println("n : " + n);
 //        System.out.println("name: "+ employee.getName());
 
-
+        Employee emp1 = new Employee("ali", 12000, 2023, 10,24);
+        Employee emp2 = new Employee("ali", 12000, 2023, 10,24);
+        Employee emp3 = emp1;
+        if(emp1.equals(emp2)) System.out.println("they are equal");
+        if(emp1.equals(emp3)) System.out.println("1 and 3 are equal");
 
     }
 }
