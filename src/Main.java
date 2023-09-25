@@ -1,8 +1,22 @@
+import java.time.Instant;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+        ArrayList<Object> x = new ArrayList<Object>();
+        x.add(0,0);
+        x.add(0,1);
+        x.add(0,2);
+        x.add(0,3);
+        x.add(0,4);
+        x.add(0,5);
+        System.out.println(Arrays.toString(x.toArray()));
+        x.remove(0);
+        System.out.println(Arrays.toString(x.toArray()));
+
 
         Manager boss = new Manager("Carl Cracker", 80000, 1987, 12, 15);
         boss.setBonus(5000);
