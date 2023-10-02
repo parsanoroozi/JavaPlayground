@@ -8,26 +8,29 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+
+        LambdaExpressions.main();
+
         /**
          * All array types have a clone method that is public, not protected.You can
          * use it to make a new array that contains copies of all elements
          * */
-        int[] luckyNumbers = { 2, 3, 5, 7, 11, 13 };
-        int[] cloned = luckyNumbers.clone();
-        cloned[5] = 12; // doesn't change luckyNumbers[5]
-
-
-        ActionListener listener = new TimePrinter();
-        Timer t = new Timer(1000, listener);
-        TimePrinter l1 = new TimePrinter();
-        try {
-            TimePrinter l2 = l1.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException(e);
-        }
-        t.start();
-        JOptionPane.showMessageDialog(null, "Quit program?");
-        System.exit(0);
+//        int[] luckyNumbers = { 2, 3, 5, 7, 11, 13 };
+//        int[] cloned = luckyNumbers.clone();
+//        cloned[5] = 12; // doesn't change luckyNumbers[5]
+//
+//
+//        ActionListener listener = new TimePrinter();
+//        Timer t = new Timer(1000, listener);
+//        TimePrinter l1 = new TimePrinter();
+//        try {
+//            TimePrinter l2 = l1.clone();
+//        } catch (CloneNotSupportedException e) {
+//            throw new RuntimeException(e);
+//        }
+//        t.start();
+//        JOptionPane.showMessageDialog(null, "Quit program?");
+//        System.exit(0);
 
 //        ArrayList<Object> x = new ArrayList<Object>();
 //        x.add(0,0);
