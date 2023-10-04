@@ -5,11 +5,20 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ * Assertion: an assertion will throw an exception if the condition is false => assert x>=0;
+ * if x is negative then an exception will throw
+ * */
 
 public class Main {
     public static void main(String[] args) {
 
-        LambdaExpressions.main();
+
+        Log.main();
+//        LambdaExpressions.main();
 
         /**
          * All array types have a clone method that is public, not protected.You can
