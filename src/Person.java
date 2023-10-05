@@ -1,61 +1,20 @@
-
-
-public class Person {
-
-    static int test = 12;
-
-    enum Size {SMALL, MEDIUM, LARGE, EXTRALARGE};
-    private String name;
-    private int age;
-    private static int ID = 20;
-
-    {
-        System.out.println("before init, for obj");
-    }
-
-    static
-    {
-        System.out.println("before init, for static");
-        ID = 25;
-    }
-
-    public Size manSize = Size.LARGE;
-
-    public Person(String name, int age){
-        this.name = name;
-        this.age = age;
-    }
-
+public abstract class Person {
+    /**
+     * in abstract classes you can either write the method signature or really implement the method
+     * this is the benefit of it over  interfaces cause in the interfaces you cannot implement methods
+     * also Abstract classes cannot be instantiated
+     *
+     * and an interface differs with an abstract  class in the fact that an interface cannot contain a field!
+     * */
+    private final String name;
     public Person(){
-        this("parsa", 23);
-        System.out.println("no args constructor!");
+        this.name = "";
     }
-
-    public static int getID(){
-        return ID;
+    public Person(String name){
+        this.name= name;
     }
-
-    public String getName() {
-        return name;
+    public String getName(){
+        return this.name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
+    public abstract String getDescription();
 }
