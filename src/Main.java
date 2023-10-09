@@ -18,7 +18,8 @@ import java.util.logging.Logger;
 public class Main {
     public static void main(String[] args) {
 
-        SimpleFrameTest.main();
+        DeployingJavaApp.main();
+//        SimpleFrameTest.main();
 //        Swing.main();
 //        CollectionFramework.main();
 //        String[] words = { "Mary", "had", "a", "little", "lamb" };
