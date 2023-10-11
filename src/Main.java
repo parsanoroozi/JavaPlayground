@@ -18,7 +18,8 @@ import java.util.logging.Logger;
 public class Main {
     public static void main(String[] args) {
 
-        DeployingJavaApp.main();
+        concurrency.Main.main();
+//        DeployingJavaApp.main();
 //        SimpleFrameTest.main();
 //        Swing.main();
 //        CollectionFramework.main();
