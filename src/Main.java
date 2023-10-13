@@ -1,3 +1,5 @@
+import swing.SimpleFrameTest;
+
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.time.Instant;
@@ -16,11 +18,15 @@ import java.util.logging.Logger;
 public class Main {
     public static void main(String[] args) {
 
-        String[] words = { "Mary", "had", "a", "little", "lamb" };
-        GenericProgramming<String> mm = ArrayAlg.minmax(words);
-        System.out.println("min = " + mm.getFirst());
-        System.out.println("max = " + mm.getSecond());
-        System.out.println(GenericProgramming.getMiddle("petter", 1, "nina", false, "kevin", "arthur"));
+        DeployingJavaApp.main();
+//        SimpleFrameTest.main();
+//        Swing.main();
+//        CollectionFramework.main();
+//        String[] words = { "Mary", "had", "a", "little", "lamb" };
+//        GenericProgramming<String> mm = ArrayAlg.minmax(words);
+//        System.out.println("min = " + mm.getFirst());
+//        System.out.println("max = " + mm.getSecond());
+//        System.out.println(GenericProgramming.getMiddle("petter", 1, "nina", false, "kevin", "arthur"));
 
 //        GenericProgramming<String> obj = new GenericProgramming<>("hello");
 //        System.out.println(obj.variable.getClass());
