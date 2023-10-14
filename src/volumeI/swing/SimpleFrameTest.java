@@ -1,4 +1,4 @@
-package swing;
+package volumeI.swing;
 
 import java.awt.*;
 import javax.swing.*;

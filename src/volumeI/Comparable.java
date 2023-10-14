@@ -1,3 +1,5 @@
+package volumeI;
+
 public interface Comparable <T>{
     /**
      *  all methods in an interface are public

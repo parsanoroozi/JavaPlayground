@@ -1,3 +1,5 @@
+package volumeI;
+
 public class ArrayAlg {
     /**
  * Gets the minimum and maximum of an array of strings.
