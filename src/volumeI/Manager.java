@@ -1,6 +1,8 @@
 package volumeI;
 
-public class Manager extends Employee{
+import java.io.Serializable;
+
+public class Manager extends Employee implements Serializable, Cloneable {
     /**
      *The fact that an object variable (such as the variable e) can refer to multiple actual
      * types is called polymorphism. Automatically selecting the appropriate method at
