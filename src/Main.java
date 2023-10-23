@@ -1,7 +1,10 @@
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
 
 /**
  * Assertion: an assertion will throw an exception if the condition is false => assert x>=0;
@@ -13,7 +16,25 @@ public class Main {
             IOException, ClassNotFoundException,
             ParserConfigurationException, SAXException {
 
-        volumeII.XmlSample.main();
+        try(ServerSocket s = new ServerSocket(8189)){
+            try(Socket incoming = s.accept()){
+                InputStream inStream = incoming.getInputStream();
+                OutputStream outStream = incoming.getOutputStream();
+                try(Scanner in = new Scanner(inStream, "UTF-8")){
+                    PrintWriter out = new PrintWriter(new OutputStreamWriter(outStream, "UTF-8"),true);
+                    out.println("Hello! enter BYE to exit.");
+                    boolean done = false;
+                    while (!done && in.hasNextLine()){
+                        String line = in.nextLine();
+                        System.out.println("Message: " + line);
+                        out.println("Echo: " + line);
+                        if(line.trim().equals("BYE"))done=true;
+                    }
+                }
+            }
+        }
+
+//        volumeII.XmlSample.main();
 //        volumeII.InputOutput.main();
 //        volumeII.StreamLibrary.main();
 //        volumeI.concurrency.Main.main();
