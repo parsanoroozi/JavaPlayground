@@ -1,3 +1,6 @@
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 
 /**
@@ -6,9 +9,12 @@ import java.io.IOException;
  * */
 
 public class Main {
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) throws
+            IOException, ClassNotFoundException,
+            ParserConfigurationException, SAXException {
 
-        volumeII.InputOutput.main();
+        volumeII.XmlSample.main();
+//        volumeII.InputOutput.main();
 //        volumeII.StreamLibrary.main();
 //        volumeI.concurrency.Main.main();
 //        DeployingJavaApp.main();
