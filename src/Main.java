@@ -29,7 +29,8 @@ public class Main {
             IOException, ClassNotFoundException,
             ParserConfigurationException, SAXException {
 
-        volumeII.network.Server.main();
+        volumeII.network.Client.main();
+//        volumeII.network.Server.main();
 
 //        volumeII.XmlSample.main();
 //        volumeII.InputOutput.main();
