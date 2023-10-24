@@ -12,27 +12,24 @@ import java.util.Scanner;
  * */
 
 public class Main {
+
+    /**
+     * In the GET command, you simply attach query parameters to the end of the URL.
+     * The URL has the form
+     * http://host/path?query
+     * Each parameter has the form name=value. Parameters are separated by & characters.
+     * Parameter values are encoded using the URL encoding scheme, following these rules:
+     * • Leave the characters A through Z, a through z, 0 through 9, and . - ~ _
+     * unchanged.
+     * • Replace all spaces with + characters.
+     * • Encode all other characters into UTF-8 and encode each byte by a %, followed
+     * by a two-digit hexadecimal number.
+     * */
     public static void main(String[] args) throws
             IOException, ClassNotFoundException,
             ParserConfigurationException, SAXException {
 
-        try(ServerSocket s = new ServerSocket(8189)){
-            try(Socket incoming = s.accept()){
-                InputStream inStream = incoming.getInputStream();
-                OutputStream outStream = incoming.getOutputStream();
-                try(Scanner in = new Scanner(inStream, "UTF-8")){
-                    PrintWriter out = new PrintWriter(new OutputStreamWriter(outStream, "UTF-8"),true);
-                    out.println("Hello! enter BYE to exit.");
-                    boolean done = false;
-                    while (!done && in.hasNextLine()){
-                        String line = in.nextLine();
-                        System.out.println("Message: " + line);
-                        out.println("Echo: " + line);
-                        if(line.trim().equals("BYE"))done=true;
-                    }
-                }
-            }
-        }
+        volumeII.network.Server.main();
 
 //        volumeII.XmlSample.main();
 //        volumeII.InputOutput.main();
