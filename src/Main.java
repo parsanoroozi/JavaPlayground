@@ -1,4 +1,5 @@
 import org.xml.sax.SAXException;
+import volumeII.Database;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
@@ -29,7 +30,8 @@ public class Main {
             IOException, ClassNotFoundException,
             ParserConfigurationException, SAXException {
 
-        volumeII.network.Client.main();
+        Database.main();
+//        volumeII.network.Client.main();
 //        volumeII.network.Server.main();
 
 //        volumeII.XmlSample.main();
