@@ -5,6 +5,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
@@ -28,7 +29,10 @@ public class Main {
      * */
     public static void main(String[] args) throws
             IOException, ClassNotFoundException,
-            ParserConfigurationException, SAXException {
+            ParserConfigurationException,
+            SAXException, SQLException {
+
+
 
         Database.main();
 //        volumeII.network.Client.main();

@@ -21,7 +21,6 @@ import java.nio.charset.StandardCharsets;
  * */
 public class Client {
     public static void main() throws IOException {
-
         URL url = new URL("https://www.usps.com/zip4/");
         URLConnection connection = url.openConnection();
         connection.setDoOutput(true);
