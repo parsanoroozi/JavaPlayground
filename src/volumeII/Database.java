@@ -1,11 +1,9 @@
 package volumeII;
 
 
-import java.awt.image.ImageProducer;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.*;
 import java.util.HashMap;
@@ -36,7 +34,7 @@ public class Database {
      *  " FROM Books, Publishers" +
      *  " WHERE Books.Publisher_Id = Publishers.Publisher_Id AND Publishers.Name = ?";
      * PreparedStatement stat = conn.prepareStatement(publisherQuery);
-     * Before executing the prepared statement, you must bind the host variables to actual values with a set method. As with the get methods of the ResultSet interface,
+     * Before executing the prepared statement, you must bind the host variables to actual values with a set method. As with the get methods of the ResultSet interface,
      * there are different set methods for the various types. Here, we want to set a string
      * to a publisher name.
      * stat.setString(1, publisher);
